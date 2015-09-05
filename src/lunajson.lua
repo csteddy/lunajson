@@ -8,13 +8,13 @@ json = {}
 
 function json.parse(str)
 
-return lunajson.newdecoder(str)
+return newdecoder(str)
 
 end
 
 function json.stringify(table)
 
-return lunajson.newencoder(table)
+return newencoder(table)
 
 end
 
