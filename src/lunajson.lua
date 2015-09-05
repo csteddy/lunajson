@@ -3,6 +3,21 @@ local newencoder = require 'lunajson.encoder'
 local sax = require 'lunajson.sax'
 -- If you need multiple contexts of decoder and/or encoder,
 -- you can require lunajson.decoder and/or lunajson.encoder directly.
+
+json = {}
+
+function json.parse(str)
+
+return lunajson.newdecoder(str)
+
+end
+
+function json.stringify(table)
+
+return lunajson.newencoder(table)
+
+end
+
 return {
 	decode = newdecoder(),
 	encode = newencoder(),
